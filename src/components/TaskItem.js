@@ -7,6 +7,7 @@ function TaskItem({id, status, name, handleChangeStatus, handleDeleteTask}) {
                   onClick={() => handleChangeStatus(id)}
                 />
             {name}
+
             <button onClick={() => handleDeleteTask(id)}>x</button>
         </li>
     );
