@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 
-function TaskList({tasks, selection, handleChangeStatus, handleDeleteTask}) {
+function TaskList({tasks, selection}) {
     return(
         <ul>
             {tasks.filter((e) => selection==='all' || e.status === selection )
@@ -10,8 +10,7 @@ function TaskList({tasks, selection, handleChangeStatus, handleDeleteTask}) {
                 id={id}
                 status={status}
                 name={name}
-                handleDeleteTask={handleDeleteTask}
-                handleChangeStatus={handleChangeStatus}
+
             />)}
         </ul>
     );
