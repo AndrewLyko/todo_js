@@ -3,7 +3,7 @@ import {db} from "../firebase";
 import {useState} from "react";
 
 function TaskInput() {
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState('');
 
     const handleKeyUp = async (event) => {
         if (event.key === 'Enter') {
@@ -12,6 +12,7 @@ function TaskInput() {
                 name: value,
                 status: false
             });
+
             setValue('');
         }
     }
@@ -25,6 +26,8 @@ function TaskInput() {
                value={value}
                onChange={handleChange}
                onKeyUp={handleKeyUp}
+               className='input'
+               placeholder='What needs to be done?'
         />
     );
 }
